@@ -15,7 +15,7 @@ public class Operacion
      */
     public Operacion(Ecuacion Ecuacion1, Ecuacion Ecuacion2)
     {
-         OperacionModelo OperacionModelo = new OperacionModelo(Ecuacion1, Ecuacion2);
+         this.OperacionModelo = new OperacionModelo(Ecuacion1, Ecuacion2);
     }
     
     public void SwitchOperacion(int op) {

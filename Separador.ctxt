@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Separador
+comment0.text=\r\n\ @author\ Andres\ Camacho\r\n\ @version\ 18/11/2020\r\n
+comment1.params=ecuacion
+comment1.target=Separador(java.lang.String)
+comment2.params=ecuacion
+comment2.target=void\ gradoEcuacion(java.lang.String)
+comment3.params=ecuacion
+comment3.target=void\ coeficientesPolinomio(java.lang.String)
+comment4.params=
+comment4.target=int\ getGrado()
+comment5.params=grado
+comment5.target=void\ setGrado(int)
+comment6.params=
+comment6.target=char\ getIncognita()
+comment7.params=incognita
+comment7.target=void\ setIncognita(char)
+comment8.params=
+comment8.target=int[]\ getCoeficientes()
+comment9.params=coeficientes
+comment9.target=void\ setCoeficientes(int[])
+numComments=10

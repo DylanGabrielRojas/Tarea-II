@@ -7,16 +7,29 @@
  */
 public class Ecuacion
     {
-    private EcuacionModelo EcuacionModelo;
-    private EcuacionVista EcuacionVista;
-
-    public void Ecuacion()
+        private EcuacionModelo EcuacionModelo = new EcuacionModelo();
+        private EcuacionVista EcuacionVista = new EcuacionVista();
+    
+/**
+     * Constructor for objects of class Ecuacion
+     */
+    public Ecuacion()
     {
-         EcuacionModelo EcuacionModelo = new EcuacionModelo();
-         EcuacionVista EcuacionVista = new EcuacionVista();
     }
     
-    public EcuacionModelo GetEcuacionModelo(){
-        return EcuacionModelo;
+    public EcuacionVista getEcuacionVista(){
+        return this.EcuacionVista;
+    }
+    
+    public void AgregarAModelo(int valor, char incognita, int potencia){
+        EcuacionModelo.agregar(valor, incognita, potencia);
+    }
+    
+    public Monomio getInicio(){
+        return EcuacionModelo.getInicio();
+    }
+    
+    public void imprimirEcuacion() {
+        EcuacionModelo.imprimirEcuacion();
     }
 }

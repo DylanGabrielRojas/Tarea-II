@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=OperacionModelo
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ OperacionModelo\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=Ecuacion1\ Ecuacion2
+comment1.params=Ecuacion01\ Ecuacion02
 comment1.target=OperacionModelo(Ecuacion,\ Ecuacion)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ OperacionModelo\r\n
 comment2.params=
@@ -16,4 +16,6 @@ comment6.params=
 comment6.target=void\ Multiplicacion()
 comment7.params=
 comment7.target=boolean\ existeSemejante()
-numComments=8
+comment8.params=
+comment8.target=Ecuacion\ retorno()
+numComments=9

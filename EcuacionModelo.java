@@ -33,11 +33,11 @@ public class EcuacionModelo
         return inicio;
     }
     
-    public void agregar(int valor, String incognita, int potencia)
+    public void agregar(int valor, char incognita, int potencia)
     {
         Monomio nuevoNodo = new Monomio();
         nuevoNodo.setValor(valor);
-        nuevoNodo.setIncognita(incognita);
+        nuevoNodo.setIncognita(Character.toString(incognita));
         nuevoNodo.setPotencia(potencia);
         
         if(esVacia())
@@ -65,15 +65,14 @@ public class EcuacionModelo
         if(!esVacia())
         {
             Monomio auxiliar = inicio;
-            
             while(auxiliar.getSiguiente() != null)
             {
-                System.out.println(auxiliar.getValor() + auxiliar.getIncognita() 
-                + auxiliar.getPotencia() + " + ");
+                System.out.print(auxiliar.getValor() + auxiliar.getIncognita() 
+                + "^" + auxiliar.getPotencia() + " + ");
                 auxiliar = auxiliar.getSiguiente();
             }
-            System.out.println(auxiliar.getValor() + auxiliar.getIncognita() 
-            + auxiliar.getPotencia());
+            System.out.print(auxiliar.getValor() + auxiliar.getIncognita() 
+            + "^" +  auxiliar.getPotencia() + "\n");
         }
     }
     

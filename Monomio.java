@@ -29,19 +29,19 @@ public class Monomio
         return valor;
     }
     
-    public void setValor(int valor)
+    public void setValor(int valorParam)
     {
-        this.valor = valor;
+        this.valor = valorParam;
     }
     
     public int getPotencia()
     {
-        return valor;
+        return potencia;
     }
     
-    public void setPotencia(int potencia)
+    public void setPotencia(int potenciaParam)
     {
-        this.valor = potencia;
+        this.potencia = potenciaParam;
     }
     
     public String getIncognita()
@@ -51,7 +51,7 @@ public class Monomio
     
     public void setIncognita(String Incognita)
     {
-        this.incognita = incognita;
+        this.incognita = Incognita;
     }
 
     public Monomio getSiguiente()

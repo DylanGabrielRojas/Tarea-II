@@ -7,41 +7,45 @@
  */
 public class OperacionModelo
 {
-    Ecuacion Ecuacion1;
-    Ecuacion Ecuacion2;
+    private Ecuacion Ecuacion1;
+    private Ecuacion Ecuacion2;
     /**
      * Constructor for objects of class OperacionModelo
      */
-    public OperacionModelo(Ecuacion Ecuacion1, Ecuacion Ecuacion2)
+    public OperacionModelo(Ecuacion Ecuacion01, Ecuacion Ecuacion02)
     {
-        Ecuacion1 = Ecuacion1;
-        Ecuacion2 = Ecuacion2;
+        this.Ecuacion1 = Ecuacion01;
+        this.Ecuacion2 = Ecuacion02;
     }
 
     public void Suma()
     {
-        Monomio auxiliar1 = Ecuacion1.GetEcuacionModelo().getInicio();
-        Monomio auxiliar2 = Ecuacion2.GetEcuacionModelo().getInicio();
+        Monomio auxiliar1 = Ecuacion1.getInicio();
+        Monomio auxiliar2 = Ecuacion2.getInicio();
         String resultado = SumarSemejantes(auxiliar1, auxiliar2);
+        System.out.println(resultado);
     }
 
     public String SumarSemejantes(Monomio auxiliar1, Monomio auxiliar2)
     {
         String suma = "";
         if(auxiliar1.getPotencia() == auxiliar2.getPotencia()){
-            if(auxiliar2.getSiguiente() != null){
+            if(auxiliar2.getSiguiente() != null && auxiliar1.getSiguiente() != null){
                 int valor = auxiliar1.getValor() + auxiliar2.getValor();
-                suma = valor + auxiliar1.getIncognita() + auxiliar1.getPotencia() + 
-                SumarSemejantes(auxiliar1, auxiliar2.getSiguiente()); 
-            }
-            else if(auxiliar1.getSiguiente() != null){
-                int valor = auxiliar1.getValor() + auxiliar2.getValor();
-                suma = valor + auxiliar1.getIncognita() + auxiliar1.getPotencia() + 
-                SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2); 
+                suma = valor + auxiliar1.getIncognita() + auxiliar1.getPotencia() + "+" +
+                SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2.getSiguiente()); 
             }
             else {
                 int valor = auxiliar1.getValor() + auxiliar2.getValor();
                 suma = valor + auxiliar1.getIncognita() + auxiliar1.getPotencia(); 
+            }
+        }
+        else {
+            if (auxiliar1.getPotencia() >  auxiliar2.getPotencia() && auxiliar2.getSiguiente() != null) {
+            return SumarSemejantes(auxiliar1, auxiliar2.getSiguiente()); 
+            }
+            else if (auxiliar1.getSiguiente() != null){
+                SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2);
             }
         }
         return suma;
@@ -49,10 +53,11 @@ public class OperacionModelo
 
     public void Resta()
     {
-        Monomio auxiliar1 = Ecuacion1.GetEcuacionModelo().getInicio();
-        Monomio auxiliar2 = Ecuacion2.GetEcuacionModelo().getInicio();
+        Monomio auxiliar1 = Ecuacion1.getInicio();
+        Monomio auxiliar2 = Ecuacion2.getInicio();
         CambiarValor(auxiliar2);
         String resultado = SumarSemejantes(auxiliar1, auxiliar2);
+        System.out.println(resultado);
     }
 
     public void CambiarValor(Monomio auxiliar)
@@ -69,8 +74,8 @@ public class OperacionModelo
     
     public boolean existeSemejante()
     {
-        Monomio auxiliar1 = Ecuacion1.GetEcuacionModelo().getInicio();
-        Monomio auxiliar2 = Ecuacion2.GetEcuacionModelo().getInicio();
+        Monomio auxiliar1 = Ecuacion1.getInicio();
+        Monomio auxiliar2 = Ecuacion2.getInicio();
         boolean encontrado = false;
         
         while(auxiliar1 != null && !encontrado)
@@ -81,4 +86,6 @@ public class OperacionModelo
         
         return encontrado;
     }
+    
+    public Ecuacion retorno(){return Ecuacion1;}
 }
