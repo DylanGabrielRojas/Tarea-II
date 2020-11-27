@@ -9,7 +9,7 @@ public class Operacion
 {
     private OperacionModelo OperacionModelo;
     private OperacionVista OperacionVista;
-    private int tipo;
+
     /**
      * Constructor for objects of class Operacion
      */
@@ -18,12 +18,8 @@ public class Operacion
          this.OperacionModelo = new OperacionModelo(Ecuacion1, Ecuacion2);
     }
     
-    public void setTipo(int Tipo){
-        this.tipo = Tipo;
-    }
-    
-    public void SwitchOperacion() {
-    switch (tipo){
+    public void SwitchOperacion(int op) {
+    switch (op){
         case 1:
             OperacionModelo.Suma();
         break;

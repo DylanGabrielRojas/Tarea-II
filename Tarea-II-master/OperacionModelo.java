@@ -32,12 +32,12 @@ public class OperacionModelo
         if(auxiliar1.getPotencia() == auxiliar2.getPotencia()){
             if(auxiliar2.getSiguiente() != null && auxiliar1.getSiguiente() != null){
                 int valor = auxiliar1.getValor() + auxiliar2.getValor();
-                suma = valor + auxiliar1.getIncognita() + "^" +auxiliar1.getPotencia() + "+" +
+                suma = valor + auxiliar1.getIncognita() + auxiliar1.getPotencia() + "+" +
                 SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2.getSiguiente()); 
             }
             else {
                 int valor = auxiliar1.getValor() + auxiliar2.getValor();
-                suma = valor + auxiliar1.getIncognita() + "^" +auxiliar1.getPotencia(); 
+                suma = valor + auxiliar1.getIncognita() + auxiliar1.getPotencia(); 
             }
         }
         else {
@@ -70,36 +70,6 @@ public class OperacionModelo
 
     public void Multiplicacion()
     {
-        Monomio auxiliar1 = Ecuacion1.getInicio();
-        Monomio auxiliar2 = Ecuacion2.getInicio();
-        String resultado = MultiplicarSemejantes(auxiliar1, auxiliar2);
-        System.out.println(resultado);
-    }
-    
-    public String MultiplicarSemejantes(Monomio auxiliar1, Monomio auxiliar2)
-    {
-        String multiplicacion = "";
-        if(auxiliar2.getSiguiente() != null){
-        System.out.println("1");
-            int valor = auxiliar1.getValor() * auxiliar2.getValor();
-            int potencia = auxiliar1.getPotencia() + auxiliar2.getPotencia();
-            multiplicacion = valor + auxiliar1.getIncognita()  + "^" + potencia + " + " +
-            MultiplicarSemejantes(auxiliar1, auxiliar2.getSiguiente()); 
-        }
-        else if(auxiliar1.getSiguiente() != null){
-        System.out.println("2");
-            int valor = auxiliar1.getValor() * auxiliar2.getValor();
-            int potencia = auxiliar1.getPotencia() + auxiliar2.getPotencia();
-            multiplicacion = valor + auxiliar1.getIncognita()  + "^" + potencia + " + ";
-            auxiliar2 = Ecuacion2.getInicio();
-            multiplicacion = multiplicacion + MultiplicarSemejantes(auxiliar1.getSiguiente(), auxiliar2); 
-        } else {
-        System.out.println("3");
-            int valor = auxiliar1.getValor() * auxiliar2.getValor();
-            int potencia = auxiliar1.getPotencia() + auxiliar2.getPotencia();
-            multiplicacion = valor + auxiliar1.getIncognita() + "^" + potencia;
-        }
-        return multiplicacion;
     }
     
     public boolean existeSemejante()

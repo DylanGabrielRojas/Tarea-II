@@ -43,8 +43,26 @@ public class SepararEcuaciones
     public void setEcuacion2(String ecuacion2) {
         this.ecuacion2 = ecuacion2;
     }
-    public String getOperando() {
-        return operando;
+    public int getOperando() {
+        int tipoOperacion = 0;
+        switch (operando) {
+            case "+":
+                tipoOperacion = 1;
+            break;
+            
+            case "-":
+                tipoOperacion = 2;
+            break;
+            
+            case "*":
+                tipoOperacion = 3;
+            break;
+            
+            case "/":
+                tipoOperacion = 4;
+            break;
+        }
+        return tipoOperacion;
     }
     public void setOperando(String operando) {
         this.operando = operando;
