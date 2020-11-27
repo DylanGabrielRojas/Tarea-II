@@ -14,10 +14,9 @@ public class Main
         SeparadorEcuaciones separarEcuaciones= new SeparadorEcuaciones(lector.leerLinea());
         SeparadorMonomios separarEcuacion1= new SeparadorMonomios(separarEcuaciones.getEcuacion1());
         SeparadorMonomios separarEcuacion2= new SeparadorMonomios(separarEcuaciones.getEcuacion2());
-        System.out.println(separarEcuaciones.getEcuacion1());
-        System.out.println(separarEcuaciones.getEcuacion2());
         Ecuacion ecuacion1 = new Ecuacion();
         Ecuacion ecuacion2 = new Ecuacion();
+        Escritor escritor= new Escritor("Archivos/Resultados.txt");
         for(int indice=0;indice<separarEcuacion1.getCantidadMonomios();indice++)
         {
             ecuacion1.AgregarAModelo(separarEcuacion1.getCoeficiente(indice),separarEcuacion1.getIncognita(),separarEcuacion1.getPotencia(indice));
@@ -28,6 +27,8 @@ public class Main
         }
         Operacion Operacion = new Operacion(ecuacion1, ecuacion2);
         Operacion.setTipo(separarEcuaciones.getOperando());
-        Operacion.SwitchOperacion();
+        escritor.escribir(separarEcuaciones.armarResultado(Operacion.SwitchOperacion()));
+        escritor.cerrarArchivo();
+        lector.cerrarArchivo();
     }
 }

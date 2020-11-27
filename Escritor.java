@@ -8,12 +8,6 @@ public class Escritor
 {
     private BufferedWriter escritor;
     private boolean usando;
-    
-    public Escritor(String ruta, boolean agregarAlFinal)
-    {
-        abrirArchivo(ruta, agregarAlFinal);
-    }
-    
     public Escritor(String ruta)
     {
         abrirArchivo(ruta, true);

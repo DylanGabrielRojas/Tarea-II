@@ -59,18 +59,5 @@ public class Lector
         return contenido;
     }
     
-    public String leerArchivo()
-    {
-        String contenido = "";
-        
-	if(usando){
-		String linea = "";
-		while((linea = leerLinea()) != null){
-			contenido += linea;
-			contenido += "\r\n";
-		}
-	}
-	return contenido;
-    }
 }
  

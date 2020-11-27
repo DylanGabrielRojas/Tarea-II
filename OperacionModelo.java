@@ -18,12 +18,12 @@ public class OperacionModelo
         this.Ecuacion2 = Ecuacion02;
     }
 
-    public void Suma()
+    public String Suma()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
         Monomio auxiliar2 = Ecuacion2.getInicio();
         String resultado = SumarSemejantes(auxiliar1, auxiliar2);
-        System.out.println(resultado);
+        return resultado;
     }
 
     public String SumarSemejantes(Monomio auxiliar1, Monomio auxiliar2)
@@ -51,13 +51,13 @@ public class OperacionModelo
         return suma;
     }
 
-    public void Resta()
+    public String Resta()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
         Monomio auxiliar2 = Ecuacion2.getInicio();
         CambiarValor(auxiliar2);
         String resultado = SumarSemejantes(auxiliar1, auxiliar2);
-        System.out.println(resultado);
+        return resultado;
     }
 
     public void CambiarValor(Monomio auxiliar)
@@ -68,12 +68,12 @@ public class OperacionModelo
         }
     }
 
-    public void Multiplicacion()
+    public String Multiplicacion()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
         Monomio auxiliar2 = Ecuacion2.getInicio();
         String resultado = MultiplicarSemejantes(auxiliar1, auxiliar2);
-        System.out.println(resultado);
+        return resultado;
     }
     
     public String MultiplicarSemejantes(Monomio auxiliar1, Monomio auxiliar2)

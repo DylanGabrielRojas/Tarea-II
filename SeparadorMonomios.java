@@ -83,6 +83,11 @@ public class SeparadorMonomios
                 if(Character.isDigit(ecuacion.charAt(posCoef)))
                 {
                     potenciaString+=ecuacion.charAt(posCoef);
+                    if(posCoef== ecuacion.length()-1)
+                    {
+                        potencias[indice]=Integer.parseInt(potenciaString);
+                        indice--;
+                    }
                 }
                 else if(ecuacion.charAt(posCoef)=='+'||ecuacion.charAt(posCoef)=='-')
                 {
