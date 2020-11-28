@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Ecuacion
+comment0.text=\r\n\ Clase\ lista\ para\ las\ ecuaciones\r\n\r\n\ @author\ Dylan,\ Andres\r\n\ @version\ 11/17/2020\r\n
+comment1.params=
+comment1.target=Ecuacion()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Ecuacion\r\n
+comment2.params=
+comment2.target=EcuacionVista\ getEcuacionVista()
+comment3.params=valor\ incognita\ potencia
+comment3.target=void\ AgregarAModelo(int,\ char,\ int)
+comment4.params=
+comment4.target=Monomio\ getInicio()
+comment5.params=
+comment5.target=void\ imprimirEcuacion()
+numComments=6

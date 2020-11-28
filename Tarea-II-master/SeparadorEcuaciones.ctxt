@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=SeparadorEcuaciones
+comment1.params=ecuacion
+comment1.target=SeparadorEcuaciones(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getEcuacion1()
+comment3.params=ecuacion1
+comment3.target=void\ setEcuacion1(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getEcuacion2()
+comment5.params=ecuacion2
+comment5.target=void\ setEcuacion2(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getOperando()
+comment7.params=operando
+comment7.target=void\ setOperando(java.lang.String)
+numComments=8
