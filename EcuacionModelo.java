@@ -59,20 +59,22 @@ public class EcuacionModelo
     }
     
     
-    public void imprimirEcuacion()
+    public String imprimirEcuacion()
     {
+        String stringEcuacion = "";
         if(!esVacia())
         {
             Monomio auxiliar = inicio;
             while(auxiliar.getSiguiente() != null)
             {
-                System.out.print(auxiliar.getValor() + auxiliar.getIncognita() 
-                + "^" + auxiliar.getPotencia() + " + ");
+                stringEcuacion = auxiliar.getValor() + auxiliar.getIncognita() 
+                + "^" + auxiliar.getPotencia() + " + ";
                 auxiliar = auxiliar.getSiguiente();
             }
-            System.out.print(auxiliar.getValor() + auxiliar.getIncognita() 
-            + "^" +  auxiliar.getPotencia() + "\n");
+            stringEcuacion = auxiliar.getValor() + auxiliar.getIncognita() 
+            + "^" +  auxiliar.getPotencia() + "\n";
         }
+        return stringEcuacion;
     }
     
     

@@ -35,6 +35,6 @@ public class Ecuacion
     }
     
     public void imprimirEcuacion() {
-        EcuacionModelo.imprimirEcuacion();
+        EcuacionVista.imprimirEcuacion(EcuacionModelo.imprimirEcuacion());
     }
 }

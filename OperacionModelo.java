@@ -1,5 +1,4 @@
- 
-/**
+ /**
  * Write a description of class OperacionModelo here.
  *
  * @author (your name)
@@ -30,22 +29,32 @@ public class OperacionModelo
     {
         String suma = "";
         if(auxiliar1.getPotencia() == auxiliar2.getPotencia()){
-            if(auxiliar2.getSiguiente() != null && auxiliar1.getSiguiente() != null){
+            if(auxiliar2.getSiguiente() != null){ 
+                if (auxiliar1.getSiguiente() != null) {
+                    int valor = auxiliar1.getValor() + auxiliar2.getValor();
+                    suma = valor + auxiliar1.getIncognita() + "^" + auxiliar1.getPotencia() + " + ";
+                    auxiliar2 = Ecuacion2.getInicio();
+                    suma = suma + SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2); 
+                } else {
+                    int valor = auxiliar1.getValor() + auxiliar2.getValor();
+                    suma = valor + auxiliar1.getIncognita() + "^" + auxiliar1.getPotencia(); 
+                }
+            } else if (auxiliar1.getSiguiente() != null) {
                 int valor = auxiliar1.getValor() + auxiliar2.getValor();
-                suma = valor + auxiliar1.getIncognita() + "^" + auxiliar1.getPotencia() + "+" +
-                SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2.getSiguiente()); 
-            }
-            else {
+                suma = valor + auxiliar1.getIncognita() + "^" + auxiliar1.getPotencia() + " + ";
+                auxiliar2 = Ecuacion2.getInicio();
+                suma = suma + SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2); 
+            } else {
                 int valor = auxiliar1.getValor() + auxiliar2.getValor();
                 suma = valor + auxiliar1.getIncognita() + "^" +auxiliar1.getPotencia(); 
             }
-        }
-        else {
-            if (auxiliar1.getPotencia() >  auxiliar2.getPotencia() && auxiliar2.getSiguiente() != null) {
+        }else{
+           if (auxiliar2.getSiguiente() != null) {
             return SumarSemejantes(auxiliar1, auxiliar2.getSiguiente()); 
             }
             else if (auxiliar1.getSiguiente() != null){
-                SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2);
+                auxiliar2 = Ecuacion2.getInicio();
+                return SumarSemejantes(auxiliar1.getSiguiente(), auxiliar2);
             }
         }
         return suma;
