@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Operacion
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Operacion\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ para\ las\ operaciones\r\n\r\n\ @author\ Dylan\ y\ Andres\r\n\ @version\ 11/17/2020\r\n
 comment1.params=Ecuacion1\ Ecuacion2
 comment1.target=Operacion(Ecuacion,\ Ecuacion)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Operacion\r\n
@@ -8,4 +8,5 @@ comment2.params=Tipo
 comment2.target=void\ setTipo(int)
 comment3.params=
 comment3.target=void\ SwitchOperacion()
+comment3.text=\r\n\ Switch\ para\ enviar\ a\ la\ operacion\ segun\ el\ tipo\ de\ operacion\ que\ ingreso\ el\ usuario\r\n
 numComments=4

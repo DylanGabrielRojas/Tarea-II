@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=EcuacionModelo
-comment0.text=\r\n\ Clase\ lista\ para\ las\ ecuaciones\r\n\r\n\ @author\ Dylan,\ Andres\r\n\ @version\ 11/17/2020\r\n
+comment0.text=\r\n\ Clase\ modelo\ para\ lista\ para\ las\ ecuaciones\r\n\r\n\ @author\ Dylan,\ Andres\r\n\ @version\ 11/17/2020\r\n
 comment1.params=
 comment1.target=EcuacionModelo()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Ecuacion\r\n
@@ -12,6 +12,8 @@ comment4.params=
 comment4.target=Monomio\ getInicio()
 comment5.params=valor\ incognita\ potencia
 comment5.target=void\ agregar(int,\ char,\ int)
+comment5.text=\r\n\ agrega\ los\ nodos\ a\ la\ lista,\ en\ la\ ultima\ posicion\r\n
 comment6.params=
 comment6.target=java.lang.String\ imprimirEcuacion()
+comment6.text=\r\n\ devuelve\ un\ String\ con\ los\ nodos\ en\ orden\r\n
 numComments=7

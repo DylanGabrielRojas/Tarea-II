@@ -1,8 +1,8 @@
- /**
- * Write a description of class OperacionModelo here.
+/**
+ * Clase Modelo para las operaciones
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Dylan y Andres
+ * @version 11/17/2020
  */
 public class OperacionModelo
 {
@@ -17,6 +17,10 @@ public class OperacionModelo
         this.Ecuacion2 = Ecuacion02;
     }
 
+
+    /**
+     * Metodo de suma, envia los parametros al metodo recursivo para sumar
+     */
     public void Suma()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
@@ -25,6 +29,10 @@ public class OperacionModelo
         System.out.println(resultado);
     }
 
+    /**
+     * metodo recursivo para sumar, efectua el algortimo para hacer la suma de los polinomios,
+     * y devuelve el String con el resultado
+     */
     public String SumarSemejantes(Monomio auxiliar1, Monomio auxiliar2)
     {
         String suma = "";
@@ -60,6 +68,11 @@ public class OperacionModelo
         return suma;
     }
 
+
+    /**
+     * Metodo de resta, funciona igual a la suma, usa el mismo metodo recursivo solo que antes cambia los 
+     * valores en la segunda ecuación por su contrario
+     */
     public void Resta()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
@@ -69,6 +82,10 @@ public class OperacionModelo
         System.out.println(resultado);
     }
 
+
+    /**
+     * metodo para cambiar los valores en una ecuación multiplicandolos por -1 funciona para la resta
+     */
     public void CambiarValor(Monomio auxiliar)
     {
         auxiliar.setValor(auxiliar.getValor()*-1);
@@ -77,6 +94,9 @@ public class OperacionModelo
         }
     }
 
+    /**
+     * Metodo de Multiplicacion, envia los parametros al metodo recursivo para Multiplicar
+     */
     public void Multiplicacion()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
@@ -86,6 +106,11 @@ public class OperacionModelo
         System.out.println(resultado);
     }
     
+
+    /**
+     * metodo recursivo para Multiplicar, efectua el algortimo para hacer la Multiplicacion de los polinomios,
+     * y devuelve el String con el resultado
+     */
     public String Multiplicar(Monomio auxiliar1, Monomio auxiliar2, Ecuacion ecuacionResultado)
     {
         String multiplicacion = "";
@@ -112,33 +137,39 @@ public class OperacionModelo
         return multiplicacion;
     }
 
+    /**
+     * metodo recursivo para sumar los semenjantes del  amultiplicacion, 
+     * efectua el algortimo para sumar los semenjantes,
+     * y devuelve el String con el resultado
+     */
     public String Sumar(Monomio auxiliar1, Monomio auxiliar2)
     {
         int valor = 0;
         Monomio auxiliarAnterior = auxiliar1;
         String suma = "";
         if (auxiliar1.getSiguiente() != null){
+            valor = auxiliar1.getValor();
             while (auxiliar2.getSiguiente() != null) {
                 if(auxiliar1.getPotencia() == auxiliar2.getPotencia()){
-                    valor+= auxiliar1.getValor() + auxiliar2.getValor();
+                    valor+=  auxiliar2.getValor();
                     auxiliarAnterior.setSiguiente(auxiliar2.getSiguiente());
                 }
                 auxiliarAnterior = auxiliar2;
                 auxiliar2 = auxiliar2.getSiguiente();
             }
-            if (valor == 0) {
-                suma = auxiliar1.getValor() + auxiliar1.getIncognita() + "^" + auxiliar1.getPotencia()
-                + "+" + Sumar(auxiliar1.getSiguiente(), auxiliar1.getSiguiente().getSiguiente());
-            } else {
                 suma = valor + auxiliar1.getIncognita() + "^" + auxiliar1.getPotencia() + "+" + 
                 Sumar(auxiliar1.getSiguiente(), auxiliar1.getSiguiente().getSiguiente());
-            }
         } else {
             suma = auxiliar1.getValor() + auxiliar1.getIncognita() + auxiliar1.getPotencia();
         } 
         return suma;
     }
 
+
+    /**
+     * Metodo de Division, envia los parametros al metodo recursivo para Dividir, no envia a un recursivo
+     * debido a que es imposible ser recursivo ya que la divison solo se efectua en 2 monomios
+     */
     public void Division()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();

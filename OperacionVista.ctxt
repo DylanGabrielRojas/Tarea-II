@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=OperacionVista
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ OperacionVista\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ Vista\ para\ las\ operaciones\r\n\r\n\ @author\ Dylan\ y\ Andres\r\n\ @version\ 11/17/2020\r\n
 comment1.params=
 comment1.target=OperacionVista()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ OperacionVista\r\n

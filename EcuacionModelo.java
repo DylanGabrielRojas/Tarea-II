@@ -1,5 +1,5 @@
 /**
- * Clase lista para las ecuaciones
+ * Clase modelo para lista para las ecuaciones
  *
  * @author Dylan, Andres
  * @version 11/17/2020
@@ -32,7 +32,9 @@ public class EcuacionModelo
     {
         return inicio;
     }
-    
+    /**
+     * agrega los nodos a la lista, en la ultima posicion
+     */
     public void agregar(int valor, char incognita, int potencia)
     {
         Monomio nuevoNodo = new Monomio();
@@ -58,7 +60,9 @@ public class EcuacionModelo
         tamanio++;
     }
     
-    
+    /**
+     * devuelve un String con los nodos en orden
+     */
     public String imprimirEcuacion()
     {
         String stringEcuacion = "";

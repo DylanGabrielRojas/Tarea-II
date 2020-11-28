@@ -1,9 +1,8 @@
-
 /**
- * Write a description of class OperacionVista here.
+ * Clase Vista para las operaciones
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Dylan y Andres
+ * @version 11/17/2020
  */
 public class OperacionVista
 {
