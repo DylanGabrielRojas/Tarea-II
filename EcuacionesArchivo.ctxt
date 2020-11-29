@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=EcuacionesArchivo
+comment0.text=\r\n\ La\ clase\ EcuacionesArchivo\ es\ la\ clase\ encargada\ de\ leer\ el\ archivo\r\n\ Ecuaciones.txt\ y\ saca\ las\ ecuaciones\ que\ luego\ agrega\ a\ una\ lista\r\n\ enlazada\r\n\ @author\ Andres,\ Dylan\r\n\r\n
+comment1.params=
+comment1.target=void\ resolverArchivo()
+comment1.text=\r\n\ resolverArchivo()\ es\ el\ metodo\ que\ lee\ el\ archivo,\ arma\ las\ listas\r\n\ y\ finalmente\ agrega\ los\ resultados\ al\ archivo\ Resultados.txt\r\n
+numComments=2

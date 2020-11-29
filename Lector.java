@@ -1,6 +1,5 @@
 /**
- * @author Andres Camacho
- * @version 18/11/2020
+ * @author Andres, Dylan
  */
 import java.io.*;
 
@@ -8,7 +7,10 @@ public class Lector
 {
      BufferedReader lector;
      boolean usando;
-
+     /**
+      * Lee el archivo que se le indique.
+      * @param rutaArchivo
+      */
     public Lector(String rutaArchivo)
     {
         try
@@ -22,7 +24,9 @@ public class Lector
             System.out.println("Error " + error);
         }	
     }
-    
+    /**
+     * Cierra el archivo
+     */
     public void cerrarArchivo()
     {
         if(usando)
@@ -39,7 +43,10 @@ public class Lector
         
         usando = false;
     }
-    
+    /**
+     * Lee una linea y la devuelve como String
+     * @return
+     */
     public String leerLinea()
     {
         String contenido = null;
@@ -59,18 +66,5 @@ public class Lector
         return contenido;
     }
     
-    public String leerArchivo()
-    {
-        String contenido = "";
-        
-	if(usando){
-		String linea = "";
-		while((linea = leerLinea()) != null){
-			contenido += linea;
-			contenido += "\r\n";
-		}
-	}
-	return contenido;
-    }
 }
  

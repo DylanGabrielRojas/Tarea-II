@@ -1,7 +1,5 @@
-
 /**
- * @author Andres Camacho
- * @version 18/11/2020
+ * @author Andres, Dylan
  */
 public class SeparadorMonomios 
 {
@@ -14,7 +12,10 @@ public class SeparadorMonomios
     private char incognita;
     private int posicion=0;
     private boolean encontrado=false;
-    
+    /**
+     * Recibe una ecuacion y separa los coeficientes, potencias, e incognita.
+     * @param ecuacion
+     */
     SeparadorMonomios(String ecuacion)
     {
         cantidadMonomios(ecuacion);
@@ -24,7 +25,10 @@ public class SeparadorMonomios
         coeficientesPolinomio(ecuacion);
         asignarPotencias(ecuacion);
     }
-    
+    /**
+     * cuenta la cantidad de monomios para determinar el tamano del vector
+     * @param ecuacion
+     */
     public void cantidadMonomios(String ecuacion)
     {
         for(int posCoef=0;posCoef<ecuacion.length();posCoef++)
@@ -39,7 +43,10 @@ public class SeparadorMonomios
         }
         cantidadMonomios++;
     }
-    
+    /**
+     * Busca la incognita de la ecuacion y la agrega a una variable.
+     * @param ecuacion
+     */
     public void hallarIncognita(String ecuacion) 
     {
         int posCoef=0;
@@ -49,7 +56,11 @@ public class SeparadorMonomios
         }
         incognita=ecuacion.charAt(posCoef);
     }
-    
+    /**
+     * Es el metodo encargado de averiguar cuales son los coeficientes
+     * de la ecuacion y los agrega a un vector
+     * @param ecuacion
+     */
     public void coeficientesPolinomio(String ecuacion)
     {
         int indice=cantidadMonomios-1;
@@ -77,7 +88,10 @@ public class SeparadorMonomios
             }
         }
     }
-    
+    /**
+     * Busca el String de la ecuacion y cuando encuentra una potencia la agrega al vector potencias[]
+     * @param ecuacion
+     */
     public void asignarPotencias(String ecuacion)
     {
         int indice=cantidadMonomios-1;

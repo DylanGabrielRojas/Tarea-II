@@ -7,6 +7,6 @@ comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Operacion\r\n
 comment2.params=Tipo
 comment2.target=void\ setTipo(int)
 comment3.params=
-comment3.target=void\ SwitchOperacion()
+comment3.target=java.lang.String\ SwitchOperacion()
 comment3.text=\r\n\ Switch\ para\ enviar\ a\ la\ operacion\ segun\ el\ tipo\ de\ operacion\ que\ ingreso\ el\ usuario\r\n
 numComments=4

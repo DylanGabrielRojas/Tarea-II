@@ -1,6 +1,5 @@
 /**
- * @author Andres Camacho
- * @version 18/11/2020
+ * @author Andres, Dylan
  */
 import java.io.*;
 
@@ -9,16 +8,20 @@ public class Escritor
     private BufferedWriter escritor;
     private boolean usando;
     
-    public Escritor(String ruta, boolean agregarAlFinal)
-    {
-        abrirArchivo(ruta, agregarAlFinal);
-    }
-    
+    /**
+     * El constructor de la clase Escritor es la que abre el asrchivo
+     * indicado en el String ruta.
+     * @param ruta
+     */
     public Escritor(String ruta)
     {
         abrirArchivo(ruta, true);
     }
-    
+    /**
+     * Abre el archivo
+     * @param ruta
+     * @param agregarAlFinal
+     */
     public void abrirArchivo(String ruta, boolean agregarAlFinal)
     {
         try{
@@ -31,7 +34,9 @@ public class Escritor
             System.out.println("Ocurrio un error al abrir el archivo");
         }
     }
-    
+    /**
+     * Cierra el archivo
+     */
     public void cerrarArchivo()
     {
         if(usando)
@@ -48,7 +53,11 @@ public class Escritor
         
         usando = false;
     }
-    
+    /**
+     * agrega el texto deseado al archivo.
+     * @param texto
+     * @return
+     */
     public boolean escribir(String texto)
     {
         boolean escrito = false;
@@ -65,7 +74,8 @@ public class Escritor
                 System.out.println("Error");
             }
         }
-        
+        System.out.println(texto);
+        System.out.println(escrito);
         return escrito;
     }
 }

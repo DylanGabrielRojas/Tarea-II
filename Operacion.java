@@ -9,6 +9,7 @@ public class Operacion
     private OperacionModelo OperacionModelo;
     private OperacionVista OperacionVista;
     private int tipo;
+    private String resultado;
     /**
      * Constructor for objects of class Operacion
      */
@@ -24,20 +25,21 @@ public class Operacion
     /**
      * Switch para enviar a la operacion segun el tipo de operacion que ingreso el usuario
      */
-    public void SwitchOperacion() {
+    public String SwitchOperacion() {
     switch (tipo){
         case 1:
-            OperacionModelo.Suma();
+            resultado=OperacionModelo.Suma();
         break;
         case 2:
-            OperacionModelo.Resta();
+             resultado=OperacionModelo.Resta();
         break;
         case 3:
-            OperacionModelo.Multiplicacion();
+             resultado=OperacionModelo.Multiplicacion();
         break;
         case 4:
-            OperacionModelo.Division();
+             resultado=OperacionModelo.Division();
         break;
     }
+    return resultado;
 }
 }

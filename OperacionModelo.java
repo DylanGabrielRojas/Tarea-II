@@ -21,12 +21,12 @@ public class OperacionModelo
     /**
      * Metodo de suma, envia los parametros al metodo recursivo para sumar
      */
-    public void Suma()
+    public String Suma()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
         Monomio auxiliar2 = Ecuacion2.getInicio();
         String resultado = SumarSemejantes(auxiliar1, auxiliar2);
-        System.out.println(resultado);
+        return resultado;
     }
 
     /**
@@ -73,13 +73,13 @@ public class OperacionModelo
      * Metodo de resta, funciona igual a la suma, usa el mismo metodo recursivo solo que antes cambia los 
      * valores en la segunda ecuación por su contrario
      */
-    public void Resta()
+    public String Resta()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
         Monomio auxiliar2 = Ecuacion2.getInicio();
         CambiarValor(auxiliar2);
         String resultado = SumarSemejantes(auxiliar1, auxiliar2);
-        System.out.println(resultado);
+        return resultado;
     }
 
 
@@ -97,13 +97,13 @@ public class OperacionModelo
     /**
      * Metodo de Multiplicacion, envia los parametros al metodo recursivo para Multiplicar
      */
-    public void Multiplicacion()
+    public String Multiplicacion()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
         Monomio auxiliar2 = Ecuacion2.getInicio();
         Ecuacion ecuacionResultado = new Ecuacion();
         String resultado = Multiplicar(auxiliar1, auxiliar2, ecuacionResultado);
-        System.out.println(resultado);
+        return resultado;
     }
     
 
@@ -170,7 +170,7 @@ public class OperacionModelo
      * Metodo de Division, envia los parametros al metodo recursivo para Dividir, no envia a un recursivo
      * debido a que es imposible ser recursivo ya que la divison solo se efectua en 2 monomios
      */
-    public void Division()
+    public String Division()
     {
         Monomio auxiliar1 = Ecuacion1.getInicio();
         Monomio auxiliar2 = Ecuacion2.getInicio();
@@ -178,7 +178,7 @@ public class OperacionModelo
         if (auxiliar1.getSiguiente() == null && auxiliar2.getSiguiente() == null) {
             if (auxiliar1.getPotencia() < auxiliar2.getPotencia()){
                 resultado = auxiliar1.getValor() + "/" + auxiliar2.getValor() + auxiliar1.getIncognita() 
-                + "^" + (auxiliar2.getPotencia()-auxiliar1.getPotencia());
+                + "^" + (auxiliar1.getPotencia()-auxiliar2.getPotencia());
             } else {
                 float cociente = (float) auxiliar1.getValor() / (float) auxiliar2.getValor();
                 resultado = cociente + auxiliar1.getIncognita() 
@@ -188,6 +188,6 @@ public class OperacionModelo
         else {
             resultado = "Las ecuaciones no son monomios";
         }
-            System.out.println(resultado);
+        return resultado;
     }
 }

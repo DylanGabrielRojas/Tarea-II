@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=SeparadorMonomios
-comment0.text=\r\n\ @author\ Andres\ Camacho\r\n\ @version\ 18/11/2020\r\n
+comment0.text=\r\n\ @author\ Andres,\ Dylan\r\n
 comment1.params=ecuacion
 comment1.target=SeparadorMonomios(java.lang.String)
+comment1.text=\r\n\ Recibe\ una\ ecuacion\ y\ separa\ los\ coeficientes,\ potencias,\ e\ incognita.\r\n\ @param\ ecuacion\r\n
 comment10.params=incognita
 comment10.target=void\ setIncognita(char)
 comment11.params=
@@ -11,12 +12,16 @@ comment12.params=coeficientes
 comment12.target=void\ setCoeficientes(int[])
 comment2.params=ecuacion
 comment2.target=void\ cantidadMonomios(java.lang.String)
+comment2.text=\r\n\ cuenta\ la\ cantidad\ de\ monomios\ para\ determinar\ el\ tamano\ del\ vector\r\n\ @param\ ecuacion\r\n
 comment3.params=ecuacion
 comment3.target=void\ hallarIncognita(java.lang.String)
+comment3.text=\r\n\ Busca\ la\ incognita\ de\ la\ ecuacion\ y\ la\ agrega\ a\ una\ variable.\r\n\ @param\ ecuacion\r\n
 comment4.params=ecuacion
 comment4.target=void\ coeficientesPolinomio(java.lang.String)
+comment4.text=\r\n\ Es\ el\ metodo\ encargado\ de\ averiguar\ cuales\ son\ los\ coeficientes\r\n\ de\ la\ ecuacion\ y\ los\ agrega\ a\ un\ vector\r\n\ @param\ ecuacion\r\n
 comment5.params=ecuacion
 comment5.target=void\ asignarPotencias(java.lang.String)
+comment5.text=\r\n\ Busca\ el\ String\ de\ la\ ecuacion\ y\ cuando\ encuentra\ una\ potencia\ la\ agrega\ al\ vector\ potencias[]\r\n\ @param\ ecuacion\r\n
 comment6.params=posicion
 comment6.target=int\ getCoeficiente(int)
 comment7.params=posicion
