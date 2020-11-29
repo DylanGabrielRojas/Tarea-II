@@ -74,8 +74,6 @@ public class Escritor
                 System.out.println("Error");
             }
         }
-        System.out.println(texto);
-        System.out.println(escrito);
         return escrito;
     }
 }
