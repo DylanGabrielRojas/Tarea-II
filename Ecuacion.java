@@ -10,7 +10,7 @@ public class Ecuacion
         private EcuacionModelo EcuacionModelo = new EcuacionModelo();
         private EcuacionVista EcuacionVista = new EcuacionVista();
     
-/**
+    /**
      * Constructor for objects of class Ecuacion
      */
     public Ecuacion()
@@ -21,6 +21,9 @@ public class Ecuacion
         return this.EcuacionVista;
     }
     
+    /**
+     * Metodo para agregar nodos a la lista
+     */
     public void AgregarAModelo(int valor, char incognita, int potencia){
         EcuacionModelo.agregar(valor, incognita, potencia);
     }
@@ -29,7 +32,15 @@ public class Ecuacion
         return EcuacionModelo.getInicio();
     }
     
+    
+    public int getTamanio(){
+        return EcuacionModelo.getTamanio();
+    }
+    
+    /**
+     * imprime la lista de ecuacion
+     */
     public void imprimirEcuacion() {
-        EcuacionModelo.imprimirEcuacion();
+        EcuacionVista.imprimirEcuacion(EcuacionModelo.imprimirEcuacion());
     }
 }

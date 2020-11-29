@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=EcuacionesManual
+comment0.text=\r\n\ \r\n\ @author\ Andres,\ Dylan\r\n\r\n
+comment1.params=
+comment1.target=void\ resolverEcuacion()
+comment1.text=\r\n\ Este\ metodo\ es\ el\ encargado\ de\ manejar\ la\ logica\ para\ \r\n\ ingresar\ ecuaciones\ manualmente\r\n
+numComments=2

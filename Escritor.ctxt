@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=Escritor
-comment1.params=ruta\ agregarAlFinal
-comment1.target=Escritor(java.lang.String,\ boolean)
-comment2.params=ruta
-comment2.target=Escritor(java.lang.String)
-comment3.params=ruta\ agregarAlFinal
-comment3.target=void\ abrirArchivo(java.lang.String,\ boolean)
-comment4.params=
-comment4.target=void\ cerrarArchivo()
-comment5.params=texto
-comment5.target=boolean\ escribir(java.lang.String)
-numComments=6
+comment1.params=ruta
+comment1.target=Escritor(java.lang.String)
+comment1.text=\r\n\ El\ constructor\ de\ la\ clase\ Escritor\ es\ la\ que\ abre\ el\ asrchivo\r\n\ indicado\ en\ el\ String\ ruta.\r\n\ @param\ ruta\r\n
+comment2.params=ruta\ agregarAlFinal
+comment2.target=void\ abrirArchivo(java.lang.String,\ boolean)
+comment2.text=\r\n\ Abre\ el\ archivo\r\n\ @param\ ruta\r\n\ @param\ agregarAlFinal\r\n
+comment3.params=
+comment3.target=void\ cerrarArchivo()
+comment3.text=\r\n\ Cierra\ el\ archivo\r\n
+comment4.params=texto
+comment4.target=boolean\ escribir(java.lang.String)
+comment4.text=\r\n\ agrega\ el\ texto\ deseado\ al\ archivo.\r\n\ @param\ texto\r\n\ @return\r\n
+numComments=5

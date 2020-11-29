@@ -2,10 +2,11 @@
 comment0.target=Lector
 comment1.params=rutaArchivo
 comment1.target=Lector(java.lang.String)
+comment1.text=\r\n\ Lee\ el\ archivo\ que\ se\ le\ indique.\r\n\ @param\ rutaArchivo\r\n
 comment2.params=
 comment2.target=void\ cerrarArchivo()
+comment2.text=\r\n\ Cierra\ el\ archivo\r\n
 comment3.params=
 comment3.target=java.lang.String\ leerLinea()
-comment4.params=
-comment4.target=java.lang.String\ leerArchivo()
-numComments=5
+comment3.text=\r\n\ Lee\ una\ linea\ y\ la\ devuelve\ como\ String\r\n\ @return\r\n
+numComments=4
